@@ -31,7 +31,7 @@ hermit_social = [
     { name = "email", link = "mailto:dannysharp416@gmail.com" }
 ]
 
-
+toc=true
 
 [extra.highlightjs]
 enable = true
