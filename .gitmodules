@@ -1,0 +1,3 @@
+[submodule "dsharp/themes/hermit_zola"]
+	path = dsharp/themes/hermit_zola
+	url = https://github.com/VersBinarii/hermit_zola

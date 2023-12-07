@@ -1,5 +1,7 @@
 # The URL the site will be built for
 base_url = "https://dsharp.dev"
+title = "Daniel Sharp"
+theme = "hermit_zola"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -13,4 +15,38 @@ build_search_index = false
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
+home_subtitle = "Aspiring Computational Scientist"
+
+footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+hermit_menu = [
+    { link = "/posts", name = "Posts" },
+    { link = "/research", name = "Research" },
+    { link = "/about", name = "About" }
+]
+
+hermit_social = [
+    { name = "linkedin", link = "https://www.linkedin.com/in/dsharp" },
+    { name = "github", link = "https://github.com/dannys4" },
+    { name = "email", link = "mailto:dannysharp416@gmail.com" }
+]
+
+
+
+[extra.highlightjs]
+enable = true
+clipboard = true
+theme = "vs2015"
+
+[extra.disqus]
+enable = false
+# Take this from your Disqus account
+shortname = "my-supa-dupa-blog"
+
+[extra.author]
+name = "Daniel Sharp"
+email = "dannysharp416@gmail.com"
+
+[extra.google_analytics]
+enable = false
+id = "UA-4XXXXXXX-X"
