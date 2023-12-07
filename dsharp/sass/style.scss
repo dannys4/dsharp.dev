@@ -32,6 +32,8 @@ html {
   letter-spacing: 0.06em;
 }
 
+
+
 body,
 button,
 input,
@@ -368,6 +370,13 @@ p.img-404 {
 #home-title {
   margin: 0;
   text-align: center;
+}
+
+#home-picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 #home-subtitle {
