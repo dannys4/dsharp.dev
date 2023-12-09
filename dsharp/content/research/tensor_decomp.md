@@ -4,7 +4,7 @@ date=2020-10-13
 draft=false
 +++
 
-![An illustration of the Higher Order Singular Value Decomposition](/posts/images/hosvd.svg)
+![An illustration of the Higher Order Singular Value Decomposition](/research/images/hosvd.svg)
 
 The Singular Value Decomposition (SVD) is a well-trodden subject of many a linear algebra class. Given a matrix $\mathbf{A}\in\mathbb{R}^{m\times n}$, we'd like to find $\mathbf{U}\in\mathbb{R}^{m\times m}$, $\mathbf{V}\in\mathbb{R}^{n\times n}$ and $\mathbf{\Sigma}\in\mathbb{R}^{m\times n}$ such that $\mathbf{A} = \mathbf{U\Sigma V}^T$, where $\mathbf{U},\mathbf{V}$ are orthogonal matrices and $\mathbf{\Sigma}$ is a diagonal matrix with positive, decreasing entries on the diagonal. For a more rigorous undertaking, see, e.g., Trefethen and Bau. This SVD can be applied to any number of things, and is frequently used as an optimal way to compress data and exploit structure. For example, if $\mathbf{U}_p,\mathbf{V}_p$ are the first $p$ columns of $\mathbf{U},\mathbf{V}$ respectively, and $\mathbf{\Sigma}_p$ corresponds to $\mathbf{\Sigma}$ appropriately, then $\mathbf{A}_p := \mathbf{U}_p\mathbf{\Sigma}_p\mathbf{V}_p^T$ will minimize $\|\mathbf{A}-\mathbf{B}\|$ over all rank-$p$ matrices $B$. In this sense, we know that the columns of $\mathbf{U}$ and $\mathbf{V}$ "contain important information" about $\mathbf{A}$ in some sense of the phrase, which is exploited in much literature (citations needed).
 

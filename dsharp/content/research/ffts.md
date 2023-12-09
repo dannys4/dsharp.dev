@@ -4,7 +4,7 @@ date=2021-04-13
 draft=false
 +++
 
-![An illustration of the Cooley-Tukey FFT with Complex Vectorization](/posts/images/cooleytukey.svg)
+![An illustration of the Cooley-Tukey FFT with Complex Vectorization](/research/images/cooleytukey.svg)
 
 The fast Fourier transform has inarguably played a role in almost all signals processing conducted today and is generally regarded among the most important and ingeneous algorithms ever developed. My research primarily focused on providing a single-dimensional implementation using vectorized complex arithmetic for the [HeFFTe Project](http://icl.utk.edu/fft/). This work was eventually published in IEEE HPEC 2021, and the paper can be found [here](https://www.icl.utk.edu/files/publications/2021/icl-utk-1497-2021.pdf). I cannot do justice to the overwhelming amount of well-written literature that explains the fast Fourier transform, let alone the Fourier transform itself, so I'd recommend looking through a few texts like [Van Loan](https://epubs.siam.org/doi/book/10.1137/1.9781611970999) or, frankly, [Wikipedia](https://en.wikipedia.org/wiki/Fast_Fourier_transform?oldformat=true#Cooley%E2%80%93Tukey_algorithm).
 
