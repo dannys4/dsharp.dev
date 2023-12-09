@@ -1,4 +1,4 @@
 +++
-title= "Research"
+title= "Posts"
 sort_by="date"
 +++
