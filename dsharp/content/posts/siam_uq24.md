@@ -13,4 +13,8 @@ The MParT repository is located at [github.com/MeasureTransport/MParT](https://g
 
 The _documentation_ of the library is located at [measuretransport.github.io/MParT](https://measuretransport.github.io/MParT), where you can find several examples rendered in Jupyter notebooks. Further, examples for C++, Matlab, and Julia are located in [github.com/MeasureTransport/MParT-examples](https://github.com/MeasureTransport/MParT-examples)
 
-For any questions about the repository, its uses and applications, or triangular transport, please feel free to post in the [discussions of the main MParT repository](https://github.com/orgs/MeasureTransport/discussions), raise an issue in the GitHub repository, or email me at `d a n n y s 4 A T m i t D O T e d u`!
+For any questions about the repository, its uses and applications, or triangular transport, please feel free to post in the [discussions of the main MParT repository](https://github.com/orgs/MeasureTransport/discussions), raise an issue in the GitHub repository, or email me at
+
+`d a n n y s 4 A T m i t D O T e d u`
+
+!
