@@ -1,3 +1,6 @@
 [submodule "dsharp/themes/hermit_zola"]
 	path = dsharp/themes/hermit_zola
 	url = https://github.com/VersBinarii/hermit_zola
+[submodule "dsharp/static/assets/research_notes"]
+	path = dsharp/static/assets/research_notes
+	url = git@github.com:dannys4/research_notes.git
