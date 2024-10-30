@@ -6,6 +6,7 @@ I am a doctoral researcher in the [MIT Uncertainty Quantification Group](https:/
 - When learning these transport maps from unnormalized densities, how do we minimize forward evaluations of the target density? Can we make this process more parallel and efficient than, e.g., MCMC?
 - Given a dataset of millions of points and a model I'd like to average over such a dataset, can I somehow "condense" this information and approximate the average with only a few hundred model evaluations?
 - Can we extend "optimal sampling methods" for traditional UQ surrogates (e.g., polynomial chaos expansions) to the realm of more modern surrogate methods?
+
 Broadly embracing these themes, I emphasize that my focus on "efficient and effective UQ" is not limited to efficient sampling, but also includes developing tools that domain experts can _actually use_ (via software, documentation, and tutorials) and ensuring that these tools are _robust_ and _reliable_ (both theoretically and practically).
 
 # Education
