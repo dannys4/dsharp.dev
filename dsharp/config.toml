@@ -20,9 +20,10 @@ home_subtitle = "Aspiring Computational Scientist"
 footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 hermit_menu = [
+    { link = "/about", name = "About" },
+    { link = "/cv", name = "CV" },
     { link = "/posts", name = "Posts" },
     { link = "/research", name = "Research" },
-    { link = "/about", name = "About" },
     { link = "/assets/research_notes/thesis/thesis-progress.html", name = "Notes" }
 ]
 
