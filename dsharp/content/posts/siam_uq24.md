@@ -5,7 +5,7 @@ draft=false
 +++
 
 # MParT Supplementary materials
-The presentation given can be found [here](/assets/uq24.pdf)
+The presentation given can be found [here](/assets/presentations/uq24.pdf)
 
 All code used to generate the work seen herein can be accessed at [github.com/dannys4/UQ24](https://github.com/dannys4/UQ24)
 
