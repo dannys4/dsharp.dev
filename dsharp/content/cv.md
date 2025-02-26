@@ -15,13 +15,30 @@ Broadly embracing these themes, I emphasize that my focus on "efficient and effe
 > Master's thesis: **[Parameterizing transport maps for ensemble data assimilation](https://dspace.mit.edu/handle/1721.1/152488)**
 
 ## Virginia Tech, 2017-2021
-> Computational Modeling and Data Analytics (CMDA), B.S. 2021    
-Applied Computational Mathematics, B.S. 2021
+> Computational Modeling and Data Analytics (CMDA), B.S. 2021
+>
+> Applied Computational Mathematics, B.S. 2021
+
+# Publications
+### Preprints
+- Gradient-free multi-fidelity Bayesian inference via importance-weighted transport maps (To appear!)
+- [Weighted quantization using MMD: From mean field to mean shift via gradient flows](https://arxiv.org/abs/2502.10600)
+
+### Proceedings
+- [A More Portable HeFFTe: Implementing a Fallback Algorithm for Scalable Fourier Transforms](https://ieeexplore.ieee.org/document/9622811) (IEEE HPEC, 2021)
+
+### Journal Articles
+> Coming soon!
+
+### Non-primary authorship
+- An introduction to triangular transport (Forthcoming!)
+- [MParT: Monotone Parameterization Toolkit](https://joss.theoj.org/papers/10.21105/joss.04843.pdf) (JOSS, 2022)
+- [Stably accelerating stiff quantitative systems pharmacology models: Continuous-time echo state networks as implicit machine learning](https://www.biorxiv.org/content/10.1101/2021.10.10.463808v1.full.pdf) (IFAC, 2022)
 
 # Selected Honors
 - CMDA Outstanding Senior Award, 2021
 - Hamlett Scholar, 2018-2021
-- [Layman prize](https://math.vt.edu/math-news/news-2021/news-laymanwinners.html) winner (_Fourier transforms on the Modern Computer_), 2021
+- Virginia Tech Math Department [Layman prize](https://math.vt.edu/math-news/news-2021/news-laymanwinners.html) winner (_Fourier transforms on the Modern Computer_), 2021
 - Mathematical Contest in Modeling, Honorable Mention (top 8% of 3500+ teams internationally), 2020
 
 # Work(-related) Experience
@@ -35,21 +52,6 @@ Applied Computational Mathematics, B.S. 2021
 
 ## [Aerospace Computational Science and Engineering Lab](https://acdl-web.mit.edu) Sysadmin, 2022-2023
 > Maintained and improved cutting-edge research compute hardware, including managing an 18-node slurm cluster as well has more than 40 personal workstations. Built and repaired computer hardware/firmware, provided technical support for lab members, and managed acquisitions.
-
-# Publications
-### Preprints
-- Gradient-free multi-fidelity Bayesian inference via importance-weighted transport maps (Forthcoming!)
-
-### Proceedings
-- [A More Portable HeFFTe: Implementing a Fallback Algorithm for Scalable Fourier Transforms](https://ieeexplore.ieee.org/document/9622811) (IEEE HPEC, 2021)
-
-### Journal Articles
-> Coming soon!
-
-### Non-primary authorship
-- An introduction to triangular transport (Forthcoming!)
-- [MParT: Monotone Parameterization Toolkit](https://joss.theoj.org/papers/10.21105/joss.04843.pdf) (JOSS, 2022)
-- [Stably accelerating stiff quantitative systems pharmacology models: Continuous-time echo state networks as implicit machine learning](https://www.biorxiv.org/content/10.1101/2021.10.10.463808v1.full.pdf) (IFAC, 2022)
 
 # Talks and Presentations
 - _Gradient-free multi-fidelity Bayesian inference via importance-weighted transport maps_, Sandia Uncertainty Quantification working group, 2024
