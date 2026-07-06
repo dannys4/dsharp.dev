@@ -30,7 +30,9 @@ hermit_menu = [
 hermit_social = [
     { name = "linkedin", link = "https://www.linkedin.com/in/dsharp" },
     { name = "github", link = "https://github.com/dannys4" },
-    { name = "email", link = "mailto:dannysharp416@gmail.com" }
+    { name = "orcid", link = "https://orcid.org/0000-0002-0439-5084" },
+    { name = "scholar", link = "https://orcid.org/0000-0002-0439-5084" },
+    { name = "email", link = "mailto:dannys4@mit.edu" }
 ]
 
 toc=true

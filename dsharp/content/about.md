@@ -22,7 +22,7 @@ I've spent time at several companies during my undergraduate career, primarily w
 
 I'm from Raleigh, North Carolina. My hobbies include music and baking. Of course, I also am passionate about math and computation. I haven't taken as many chances to explore the great outdoors as I wish, but I do enjoy hiking and backpacking on occasion. Personally, I enjoy mentoring other students and ensuring their understanding-- all too often, early experiences in math or computation will turn a student off from the respective topic, and I do my best to show them not just the intrigue of such topics, but the importance of them as well.
 
-### Interested in more about me? Contact me at dannysharp416 AT gmail DOT com.
+### Interested in more about me? Contact me at dannys4 AT mit DOT edu.
 
 ## An Aside on Free Software
 
