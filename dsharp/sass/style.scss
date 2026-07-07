@@ -22,10 +22,8 @@
 html {
     background: linear-gradient(
       to top,
-      green 0%,
-      green 80%,
-      darkgreen 80%,
-      darkgreen 100%
+      #006600 80%,
+      #005500 20%,
     );
 
   line-height: 1.6;
@@ -96,7 +94,7 @@ blockquote {
 }
 
 a {
-  color: $text;
+  color: color-mix(in srgb, $text, #21759b);
   text-decoration: none;
   border: none;
   transition-property: color;
@@ -104,7 +102,7 @@ a {
   transition-timing-function: ease-out;
 
   &:hover {
-    color: #fff;
+    color: #000;
   }
 
   &:focus {
