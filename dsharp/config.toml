@@ -37,6 +37,9 @@ hermit_social = [
 
 toc=true
 
+katex_enable = true
+katex_auto_render = true
+
 [extra.highlightjs]
 enable = true
 clipboard = true
