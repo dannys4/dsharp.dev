@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta itemprop="name" content="Daniel Sharp" />
+  <meta itemprop="description" content="" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dsharp.dev/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://dsharp.dev/favicon-32x32.png" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://dsharp.dev/favicon-16x16.png"
+  />
+  <link
+    rel="shortcut icon"
+    href="https://dsharp.dev/favicon.ico"
+  />
+  <link rel="stylesheet" href="https://dsharp.dev/style.css"/>
+  
+  <title>A few special cases of Hermite polynomials: Expectations under general Gaussians</title>
+  
+
+  
+
+  <body id="page">
+
+	
+<header id="site-header" class="animated slideInUp faster">
+    <div class="hdr-wrapper section-inner">
+        <div class="hdr-left">
+            <div class="site-branding">
+                <a href="https:&#x2F;&#x2F;dsharp.dev">Daniel Sharp</a>
+            </div>
+            <nav class="site-nav hide-in-mobile">
+
+                
+                <a href="https://dsharp.dev/about">About</a>
+                
+                <a href="https://dsharp.dev/cv">CV</a>
+                
+                <a href="https://dsharp.dev/posts">Posts</a>
+                
+                <a href="https://dsharp.dev/research">Research</a>
+                
+                <a href="https://dsharp.dev/assets/research_notes/thesis/thesis-progress.html">Notes</a>
+                
+            </nav>
+        </div>
+        <div class="hdr-right hdr-icons">
+            <span class="hdr-social hide-in-mobile">
+                
+
+<a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;dsharp" target="_blank" rel="noopener me"
+   title="linkedin">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+  
+</a>
+
+<a href="https:&#x2F;&#x2F;github.com&#x2F;dannys4" target="_blank" rel="noopener me"
+   title="github">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+  
+</a>
+
+<a href="https:&#x2F;&#x2F;orcid.org&#x2F;0000-0002-0439-5084" target="_blank" rel="noopener me"
+   title="orcid">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+  
+</a>
+
+<a href="https:&#x2F;&#x2F;orcid.org&#x2F;0000-0002-0439-5084" target="_blank" rel="noopener me"
+   title="scholar">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" fill="currentcolor" stroke="none" viewBox="0 0 512 512"><path d="M256 411.12L0 202.667 256 0z"/><path d="M256 411.12l256-208.453L256 0z"/><circle cx="256" cy="362.667" r="149.333"/><path d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"/></svg>
+  
+</a>
+
+<a href="mailto:dannys4@mit.edu" target="_blank" rel="noopener me"
+   title="email">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+  
+</a>
+
+
+            </span>
+            <button id="menu-btn" class="hdr-btn" title="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+<div id="mobile-menu" class="animated fast">
+    <ul>
+        
+        <li><a href="https://dsharp.dev/about">About</a></li>
+        
+        <li><a href="https://dsharp.dev/cv">CV</a></li>
+        
+        <li><a href="https://dsharp.dev/posts">Posts</a></li>
+        
+        <li><a href="https://dsharp.dev/research">Research</a></li>
+        
+        <li><a href="https://dsharp.dev/assets/research_notes/thesis/thesis-progress.html">Notes</a></li>
+        
+    </ul>
+</div>
+
+
+
+<link rel="stylesheet" href="https://dsharp.dev/katex.css">
+<script defer src="https://dsharp.dev/katex.js"></script>
+<script defer src="https://dsharp.dev/auto-render.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$", right: "$", display: false},
+            ]
+        });
+    });
+</script>
+
+
+
+
+	
+
+		
+<main class="site-main section-inner animated fadeIn faster">
+    <article class="thin">
+        <header class="post-header">
+            <div class="post-meta">
+                
+                <span>Aug 30, 2026</span>
+                <small> - 
+<span class="reading-time" title="Estimated read time">
+  
+  9 min read
+  
+</span>
+</small>
+                
+                
+            </div>
+            <h1>A few special cases of Hermite polynomials: Expectations under general Gaussians</h1>
+        </header>
+
+        <div class="content">
+
+            <p>Anyone who knows me knows that I love the set of Hermite polynomials; they are, truly, a beautiful set of polynomials for the probabilist. They form a complete basis under a Gaussian weighting (in the $L_2$ sense), they work quite well for approximation, and they have deep ties to physics. For example, in the age of diffusion modeling, it seems like more people should know that these polynomials form the eigenfunctions of the Ornstein--Uhlenbeck process.</p>
+<p>Something that's come up a few times for me is a few (constructive) formulas regarding the average of Hermite polynomials under a general Gaussian, and this isn't readily apparent in the abundant set of formulas on their extremely long Wikipedia page. They include a Feldheim (integral) formula that technically subsumes what I put down here, but I don't particularly like the generality of this one. Further, everything is about physicist Hermite polynomials, which I do not like, and I thought a few derivations were in order.</p>
+<p>This is a blog post; technically, nothing here recovers anything I know from the literature, but I also acknowledge that the literature is far wider than I wish to cover. Further, I view these pedagogically rather than of particular use.</p>
+<h1 id="what-are-the-hermite-polynomials">What are the Hermite polynomials?</h1>
+<p>There are many definitions for them, but I'm going to define the (probabilist!) Hermite polynomials using their three-term recurrence definition. For a fixed $n \geq 0$, define $\mathrm{He}_n$ at $x\in\mathbb{R}$ as</p>
+<p>$$
+\mathrm{He}_{n+1}(x) = x\mathrm{He}_{n}(x) + n\mathrm{He}_{n-1}(x),\quad \mathrm{He}_0\equiv 1,\quad \mathrm{He}_1(x) = x.
+$$</p>
+<p>I think it's pretty clear this is a polynomial. I won't go into much detail on why this is important, as I think the Wikipedia page does a much better job than I can.</p>
+<p>As a point of note, I am solely focused <em>probabilist</em> Hermite polynomials $\mathrm{He}_n$, though I'll use some identities from physicist Hermite polynomials $H_n$; these are related through the identity:
+$$
+H_n(x) = 2^{\frac{n}{2}} \mathrm{He}_n (\sqrt{2} x),\quad \mathrm{He}_n(x) = 2^{-\frac{n}{2}} H_n\left( \frac{x}{\sqrt{2}}\right).
+$$
+Another point is that <em>all expectations</em> are over a standard Gaussian measure. For reasons that I think will be apparent, it's easier to work by transforming the space of the input of the polynomial rather than work on a more general measure.</p>
+<h1 id="some-useful-facts">Some useful facts:</h1>
+<h3 id="zero-ttrr-consequences">Zero: TTRR consequences</h3>
+<p>A few little properties falling out of the TTRR pretty directly. First, the derivative of a Hermite polynomial is a Hermite polynomial, i.e.,
+$$
+\mathrm{He}_n^\prime(x) = n\mathrm{He}_{n-1}(x).
+$$
+We can see this immediately from induction on the three-term recurrence:
+$$\begin{aligned}
+\mathrm{He}_{n+1}^\prime(x) &amp;= \mathrm{He}_n(x) + x\mathrm{He}^\prime_n(x) + n\mathrm{He}_{n-1}^\prime(x)\\
+&amp;=\mathrm{He}_{n}(x) + n(x\mathrm{He}_{n-1}(x) - (n-1)\mathrm{He}_{n-2}(x))\\
+&amp;= (n+1)\mathrm{He}_{n}(x).
+\end{aligned}$$</p>
+<p>Another odd factoid which, perhaps surprisingly, will come in handy. We get that the behavior of the Hermite polynomial on the imaginary line will be relatively nice. We can see
+$$
+\mathrm{He}_{2k}(ix)\in\mathbb{R},\quad i\mathrm{He}_{2k-1}(ix)\in\mathbb{R}.
+$$
+Suppose we have $y_k = \mathrm{He}_{2k}(ix)$ and $iz_k = \mathrm{He}_{2k-1}(ix)$ for $y_k,z_k\in\mathbb{R}$. Then,
+$$
+\mathrm{He}_{2k+1}(ix) = (ix)y_k - n(iz_k) = i(xy_k - nz_k) = iz_{k+1},
+$$
+where $z_{k+1}\in\mathbb{R}$. Similarly,
+$$
+\mathrm{He}_{2k+2}(ix) = (ix)iz_{k+1} - ny_k = -xz_{k+1} - ny_k = y_{k+1},
+$$
+where $y_{k+1}\in\mathbb{R}$.</p>
+<h3 id="one-the-generating-function-of-hermite-polynomials">One: The generating function of Hermite polynomials</h3>
+<p>Many orthogonal polynomials---e.g., Laguerre, Legendre, Jacobi---have what's called a <em>generating function</em>: For a set of polynomials (or, more broadly, a function family) denoted $p_n$ for $n\geq 0$, the generating function of this family, $F:\mathbb{R}\times\mathbb{R}\to\mathbb{R}$, is formally defined as
+$$
+F(x,t) = \sum_{n=0}^\infty p_n(x) \frac{t^n}{n!}.
+$$
+The Hermite polynomials are no exception. We get:
+$$F(x,t) = \exp\left(xt - \frac{1}{2}t^2\right).$$</p>
+<p>In fact, one can use this to define the Hermite polynomials and recover the TTRR. Consider
+$$
+\frac{d}{dt}F(x,t) = (x-t)F(x,t),\quad \frac{d^2}{dt^2} F(x,t) = -F(x,t) + (x-t)^2 F(x,t).
+$$
+One can repeat this a few more times to induce the following identity:
+$$
+\frac{d^{n+1}}{dt^{n+1}}F(x,t) = (x-t) \frac{d^{n}}{dt^{n}}F(x,t) - n\frac{d^{n-1}}{dt^{n-1}} F(x,t).
+$$
+We know, however, that the map $f_n(t)$ defined as $t\mapsto\frac{d^n}{dt^n} F(x,t)$ satisfies $f_n(0) = \mathrm{He}_n(x)$ as defined by the Maclaurin series expansion. Therefore, the generating function also defines this three-term expansion.</p>
+<h3 id="two-the-fourier-transform-of-the-gaussian">Two: The Fourier transform of the Gaussian</h3>
+<p>This is a pretty standard result that people generally see when introduced to the (continuous) Fourier transform, so I won't dwell on it. You should just know (how to look up) that
+$$
+\frac{1}{\sqrt{2\pi\sigma^2}}\int \exp(-ixt)\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)\ \mathrm{d}t = \exp(-i\mu t)\exp\left(-\frac{1}{2}\sigma^2 t^2\right).
+$$
+This subsumes the well-known fact that the Fourier transform of a Gaussian is a scaled Gaussian; take $\mu=0$ and $\sigma^2=1/2$ for what people usually derive in signals and systems classes.</p>
+<h3 id="three-the-feldheim-summation-formula">Three: The Feldheim summation formula</h3>
+<p>This one is somewhat annoying. The easiest way to access this information is via the <a href="https://authors.library.caltech.edu/records/cnd32-h9x80">Bateman manuscript project</a>, Vol ii, Chapter 10.13. Equation (37) translated accordingly for probabilist Hermite polynomials reads:
+$$\begin{aligned}
+\mathrm{He}_n(x)\mathrm{He}_m(x) &amp;= \sum_{r=0}^{\min(n,m)} r! \binom{n}{r}\binom{m}{r} \mathrm{He}_{n+m-2r}(x)\\
+&amp;=\sum_{r=0}^{\min(n,m)} \frac{n!m!}{r!(n-r)!(m-r)!}\mathrm{He}_{n+m-2r}(x).
+\end{aligned}$$</p>
+<p>They claim, however, that this &quot;can easily be proved by means of the generating function.&quot; Maybe I'm blind, but ridiculous statements like this are something I don't miss from the era before overly-explanatory ML math papers. For what its worth, Feldheim---<a href="https://doi-org.libproxy.mit.edu/10.1112/jlms/s1-13.1.22">to whom this identity is sometimes credited</a> (Eqn 1.4)---writes this identity in French, which I do not understand. He, however, cites <a href="https://dspace.bcu-iasi.ro/static/web/viewer.html?file=https://dspace.bcu-iasi.ro/bitstream/handle/123456789/43666/Bulletin%20of%20the%20Calcutta%20Mathematical%20Society%2c%201934%2c%20Vol.%20%2026.pdf?sequence=2&amp;isAllowed=y">a contemporaneous result by S.C. Dhar</a> (Bulletin of the Calcutta Mathematical Society, Volume 26, Page 59, Eqn (7)) in <a href="https://dwc.knaw.nl/DL/publications/PU00017406.pdf">a later review</a> (Page 229). Dhar's proof, while in English, relies on Cauchy integration which hardly seems necessary.</p>
+<p>What Feldheim does, however, is a brute-force combinatorial proof (which I think makes a lot of sense). I will try to reproduce it in English, more-or-less. Without loss of generality, assume $n\leq m$. First, note a few things: We know that $\mathrm{He}_n\mathrm{He}_m$ is a polynomial of degree $n+m$, and thus can be represented by the first $n+m$ Hermite polynomials. Further, we know that even-degree Hermite polynomials are even functions and odd-degree Hermite polynomials are odd functions. Thus, the parity of $n+m$ (i.e., whether it's even or odd) determines the parity of the functions, i.e., we <em>know</em> before doing any analysis that
+$$
+\mathrm{He}_{n}(x)\mathrm{He}_{m}(x) = \sum_{r=0}^{n} a_{r}^{(m,n)}\mathrm{He}_{n+m-2r}(x).
+$$
+This ensures that the resulting polynomial has the correct parity, since we assumed $n\leq m$ and thus $n+m-2r \geq 0$ is ensured. One can, at this point, formally use Hermite triple-products to get $a_{r}^{(m,n)}$, i.e.,
+$$
+a_{r}^{(m,n)} = \mathbb{E}[\mathrm{He}_{n}\mathrm{He}_{m}\mathrm{He}_{n+m-2r}],
+$$
+which is extremely nontrivial without such Feldheim formulas beforehand.</p>
+<p>We're going to assume $m &gt; n$ for easy purposes. One can do everything more carefully, though. Using the Appell property $\mathrm{He}_{n}^{\prime}= n\mathrm{He}_{n-1}$, we differentiate both sides to see that
+$$
+n\mathrm{He}_{n-1}(x)\mathrm{He}_{m}(x) + m\mathrm{He}_{n}(x)\mathrm{He}_{m-1}(x) = \sum_{r=0}^{n}a_{r}^{(m,n)}(n+m-2r)\mathrm{He}_{n+m-2r-1}(x).
+$$
+We also know
+$$
+\mathrm{He}_{n-1}(x)\mathrm{He}_{m}(x) = \sum_{r=0}^{n-1} a_{r}^{(m,n-1)}\mathrm{He}_{n-1+m-2r}(x).
+$$
+Therefore, we know:
+$$
+\sum_{r=0}^{n}a_{r}^{(m,n)}(n+m-2r)\mathrm{He}_{n+m-2r-1}(x) = \sum_{r=0}^{n-1} (na_{r}^{(m,n-1)} + ma_{r}^{(m-1,n)})\mathrm{He}_{n+m-2r-1}(x).
+$$
+For identifiability purposes, then, we must have that
+$$
+(n+m-2r)a_{r}^{(m,n)} = na_{r}^{(m,n-1)} + ma_{r}^{(m-1,n)}.
+$$
+Now we simply prove that the binomial-like term follows this property:
+$$
+\begin{aligned}
+n a_{r}^{(m,n-1)} + ma_{r}^{(m-1,n)} &amp;= n\frac{(n-1)!m!}{(n-1-r)!(m-r)!r!} + m\frac{n!(m-1)!}{(n-r)!(m-1-r)!}\\
+&amp;= (n-r) \frac{n!m!}{(n-r)!(m-r)!r!} + (m-r) \frac{n!m!}{(n-r)!(m-r)!}\\
+&amp;= (n + m - 2r) a_{r}^{(m,n)}.
+\end{aligned}
+$$
+To be completely honest, I'm not super satisfied with this proof: it's obviously complete (for $m &gt; n$), but the combinatorial coefficient seems to kind of come out thin air. I guess this is why I work in computation and not combinatorics. Like I said, Dhar gives a completely different proof that uses the Cauchy integral formula, i.e., complex analysis. This gives a little more intuition: the factorials simply come from Gamma functions, which are characteristic of contour integral formulas.</p>
+<p>A nice consequence of this which I won't get into is some identities of Hermite triple products:
+$$
+\mathbb{E}[\mathrm{He}_n\mathrm{He}_m\mathrm{He}_{n+m-2r}] = \frac{n!m!}{r!(n-r)!(m-r)!,}
+$$
+and that Hermite triple products are &quot;sparse&quot; in the index space. These are particularly helpful in many polynomial approximation papers; see, e.g., stochastic Galerkin approaches to PDEs with random coefficients.</p>
+<h1 id="an-account-of-general-gaussian-formulas">An account of general Gaussian formulas</h1>
+<p>We are now ready to give some characterizations of expectations of probabilist Hermite polynomials under arbitrary Gaussian probability densities.</p>
+<h3 id="lemma-1-expectation-of-a-transformed-hermite-polynomial">Lemma 1: Expectation of a transformed Hermite polynomial</h3>
+<p>First, I'm going to discuss the expectation
+$$
+\mathbb{E}[\mathrm{He}_n (sX + m)],\ s,m\in\mathbb{R},
+$$
+which is equivalent to the expectation of $\mathrm{He}_n$ over an arbitrary Gaussian.</p>
+<p>$$
+\begin{aligned}
+\sum_{k=0}^{\infty}\mathrm{He}_{k}(sx+m) \frac{t^{k}}{k!} &amp;= \exp\left((sx+m)t- \frac{1}{2}t^{2}\right)\\
+\sum_{k=0}^{\infty}\mathbb{E}[\mathrm{He}_{k}(sX+m)] \frac{t^{k}}{k!} &amp;= \mathbb{E}\left[ \exp\left((sX + m)t - \frac{1}{2} t^{2}\right)\right]\\
+&amp;= \exp\left(- \frac{1}{2}t^{2}\right) \mathbb{E}\left[ \exp\left(i(sX+m) \frac{t}{i}\right)\right]\\
+&amp;= \exp\left(- \frac{1}{2}t^{2}\right) \exp(mt)\exp\left(\frac{1}{2}s^{2}t^{2}\right)\\
+&amp;=\exp\left(mt - \frac{1 - s^2}{2}t^2\right)
+\end{aligned}
+$$
+where the second-to-last step comes from the Fourier transform of the Gaussian with mean $m$ and variance $s^2$ evaluated at $t/i$. Continuing on, it seems reasonable enough to find some $x^\prime,t^\prime$ such that we get the righthand side of the above expressions as a generating function evaluation $F(x^\prime, t^\prime). This would allow us to move back to a summation, then allow us to hopefully decouple each term from one another.</p>
+<p>Recall that all of these are defined on the complex plane; then, reindex using auxiliary variables $t^\prime = \sqrt{1-s^2}$ and $x^\prime = m / \sqrt{1-s^2}$. We thus get
+$$\begin{aligned}
+\exp\left(mt - \frac{1-s^2}{2}t^2\right) &amp;= \exp\left(x^\prime t^\prime - \frac{1}{2}t^\prime\right)\\
+&amp;= F(x^\prime, t^\prime)\\
+&amp;= \sum_{k=0}^\infty \mathrm{He}_n(x^\prime) \frac{(t^\prime)^k}{k!}\\
+&amp;= \sum_{k=0}^\infty \mathrm{He}_k\left(\frac{m}{\sqrt{1-s^2}}\right)(1-s^2)^{k/2}\ \frac{t^k}{k!}.
+\end{aligned}$$</p>
+<p>By, e.g., extension arguments, we must then have that:
+$$
+\mathbb{E}[\mathrm{He}_n(sX + m)] = \mathrm{He}_n\left(\frac{m}{\sqrt{1-s^2}}\right)(1-s^2)^{n/2}.
+$$
+This is, in fact, always a real quantity! When $n$ is even, evaluating $\mathrm{He}_n$ on the imaginary line gives a real number as shown in property 0, and $(1-s^2)$ is taken to an integer power. When $n$ is odd, the polynomial $\mathrm{He}_n$ will give an imaginary number but $(1-s^2)^{n/2}$ will be imaginary as well, giving a real number! Unfortunately, though, we cannot evaluate these objects easily entirely without the complex numbers without just expanding the Hermite polynomial into a weighted sum of monomials, which makes it more difficult to work with.</p>
+<h3 id="lemma-2-expectation-of-a-product-of-hermite-polynomials">Lemma 2: Expectation of a product of Hermite polynomials</h3>
+<p>The hard parts are completed: we can pretty much just use the above formula as well as the Feldheim formula:
+$$\begin{aligned}
+\mathbb{E}[\mathrm{He}_i(sX+m)\mathrm{He}_j(sX+m)] &amp;= \sum_{r=0}^{\min(i,j)} \frac{i!j!}{r!(i-r)!(j-r)!}\mathbb{E}[\mathrm{He}_{i+j-2r}(sX+m)]\\
+&amp;= \sum_{r=0}^{\min(i,j)} \frac{i!j!}{r!(i-r)!(j-r)!}\mathrm{He}_{i+j-2r}\left(\frac{m}{\sqrt{1-s^2}}\right)(1-s^2)^{\frac{i+j-2r}{2}}.
+\end{aligned}$$</p>
+
+        </div>
+        <hr class="post-end">
+        <footer class="post-info">
+            
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-file-text">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>2394 Words</p>
+            
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-calendar">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>2026-08-30</p>
+            
+        </footer>
+    </article>
+    
+
+    <div class="post-nav thin">
+        
+        
+    </div>
+
+    
+</main>
+
+	  </div>
+
+	  
+
+
+
+<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+  <p>&copy; 2026 <a href="https:&#x2F;&#x2F;dsharp.dev">Daniel Sharp</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+  <p>Made with <a href="https://www.getzola.org" target="_blank" rel="noopener">Zola</a> &#183; Theme <a href="https://github.com/VersBinarii/hermit_zola" target="_blank" rel="noopener">Hermit_Zola</a>
+	
+  </p>
+</footer>
+
+
+
+
+	</div>
+
+	<script src="https://dsharp.dev/js/main.js"></script>
+
+	<!-- Math rendering -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+
+    
+		<link href="https://unpkg.com/highlightjs-badge/highlightjs/styles/vs2015.css" rel="stylesheet">
+		<!-- https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/  for min version -->
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
+		<script>
+			var pres = document.querySelectorAll("pre>code");
+			for (var i = 0; i < pres.length; i++) {
+				hljs.highlightBlock(pres[i]);
+			}
+		</script>
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+			<script>
+				var options = {
+					copyIconClass: "gg-clipboard",
+					checkIconClass: "gg-check"
+				};
+				window.highlightJsBadge(options);
+			</script>
+		
+
+	
+
+	
+	<script src="https://dsharp.dev/js/main.js"></script>
+
+    
+    
+
+	
+  </body>
+</html>

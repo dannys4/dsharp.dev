@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/assets/qualsort/static/css/main.f855e6bc.css",
+    "main.js": "/assets/qualsort/static/js/main.b6f9ad3f.js",
+    "static/js/453.78d0e585.chunk.js": "/assets/qualsort/static/js/453.78d0e585.chunk.js",
+    "index.html": "/assets/qualsort/index.html",
+    "main.f855e6bc.css.map": "/assets/qualsort/static/css/main.f855e6bc.css.map",
+    "main.b6f9ad3f.js.map": "/assets/qualsort/static/js/main.b6f9ad3f.js.map",
+    "453.78d0e585.chunk.js.map": "/assets/qualsort/static/js/453.78d0e585.chunk.js.map"
+  },
+  "entrypoints": [
+    "assets/qualsort/static/css/main.f855e6bc.css",
+    "assets/qualsort/static/js/main.b6f9ad3f.js"
+  ]
+}

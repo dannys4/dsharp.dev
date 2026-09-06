@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta itemprop="name" content="Daniel Sharp" />
+  <meta itemprop="description" content="" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dsharp.dev/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://dsharp.dev/favicon-32x32.png" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://dsharp.dev/favicon-16x16.png"
+  />
+  <link
+    rel="shortcut icon"
+    href="https://dsharp.dev/favicon.ico"
+  />
+  <link rel="stylesheet" href="https://dsharp.dev/style.css"/>
+  
+  <title>The philosopher&#x27;s stone and the chemist&#x27;s catalyst: Thoughts on LLM usage for (applied math) research</title>
+  
+
+  
+
+  <body id="page">
+
+	
+<header id="site-header" class="animated slideInUp faster">
+    <div class="hdr-wrapper section-inner">
+        <div class="hdr-left">
+            <div class="site-branding">
+                <a href="https:&#x2F;&#x2F;dsharp.dev">Daniel Sharp</a>
+            </div>
+            <nav class="site-nav hide-in-mobile">
+
+                
+                <a href="https://dsharp.dev/about">About</a>
+                
+                <a href="https://dsharp.dev/cv">CV</a>
+                
+                <a href="https://dsharp.dev/posts">Posts</a>
+                
+                <a href="https://dsharp.dev/research">Research</a>
+                
+                <a href="https://dsharp.dev/assets/research_notes/thesis/thesis-progress.html">Notes</a>
+                
+            </nav>
+        </div>
+        <div class="hdr-right hdr-icons">
+            <span class="hdr-social hide-in-mobile">
+                
+
+<a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;dsharp" target="_blank" rel="noopener me"
+   title="linkedin">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+  
+</a>
+
+<a href="https:&#x2F;&#x2F;github.com&#x2F;dannys4" target="_blank" rel="noopener me"
+   title="github">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+  
+</a>
+
+<a href="https:&#x2F;&#x2F;orcid.org&#x2F;0000-0002-0439-5084" target="_blank" rel="noopener me"
+   title="orcid">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+  
+</a>
+
+<a href="https:&#x2F;&#x2F;orcid.org&#x2F;0000-0002-0439-5084" target="_blank" rel="noopener me"
+   title="scholar">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" fill="currentcolor" stroke="none" viewBox="0 0 512 512"><path d="M256 411.12L0 202.667 256 0z"/><path d="M256 411.12l256-208.453L256 0z"/><circle cx="256" cy="362.667" r="149.333"/><path d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"/></svg>
+  
+</a>
+
+<a href="mailto:dannys4@mit.edu" target="_blank" rel="noopener me"
+   title="email">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+  
+</a>
+
+
+            </span>
+            <button id="menu-btn" class="hdr-btn" title="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+<div id="mobile-menu" class="animated fast">
+    <ul>
+        
+        <li><a href="https://dsharp.dev/about">About</a></li>
+        
+        <li><a href="https://dsharp.dev/cv">CV</a></li>
+        
+        <li><a href="https://dsharp.dev/posts">Posts</a></li>
+        
+        <li><a href="https://dsharp.dev/research">Research</a></li>
+        
+        <li><a href="https://dsharp.dev/assets/research_notes/thesis/thesis-progress.html">Notes</a></li>
+        
+    </ul>
+</div>
+
+
+
+<link rel="stylesheet" href="https://dsharp.dev/katex.css">
+<script defer src="https://dsharp.dev/katex.js"></script>
+<script defer src="https://dsharp.dev/auto-render.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$", right: "$", display: false},
+            ]
+        });
+    });
+</script>
+
+
+
+
+	
+
+		
+<main class="site-main section-inner animated fadeIn faster">
+    <article class="thin">
+        <header class="post-header">
+            <div class="post-meta">
+                
+                <span>Jul 07, 2026</span>
+                <small> - 
+<span class="reading-time" title="Estimated read time">
+  
+  13 min read
+  
+</span>
+</small>
+                
+                
+            </div>
+            <h1>The philosopher&#x27;s stone and the chemist&#x27;s catalyst: Thoughts on LLM usage for (applied math) research</h1>
+        </header>
+
+        <div class="content">
+
+            <p>As all contemporary think-pieces, this is about artificial intelligence; more specifically, the use of it in scientific research. I must first expose my general bias against it, which will be quite apparent in my writing. My bias, however, should not undermine the constructive use of my thoughts. On the other hand, there are plenty of opinions relying on dubious studies that likely cannot be replicated, e.g., that LLMs <a href="https://www.mdpi.com/2075-4698/15/1/6">reduce ability to think critically</a>, and <a href="https://www.sciencedirect.com/science/article/pii/S2666920X25001699">that students may over-rely on them</a> despite their benefits, etc. I must second say that I will use the terms LLM, AI, and models interchangeably; the nuances between these do not detract from my overall message.</p>
+<blockquote>
+<p>All thoughts and opinions here are my own; they do not reflect my employer, collaborators, or my professional work.</p>
+</blockquote>
+<p>At the same time, I see <a href="https://newsroom.haas.berkeley.edu/how-ai-is-transforming-research-more-papers-less-quality-and-a-strained-review-system/">many researchers surrender to it</a>, suggesting that there is a spectrum of use while staunchly asserting that no sane and accomplished academic is on the &quot;zero&quot; end of this scale. I also see more advanced forms of surrender in the form of over- or complete-reliance on Agents, with assertions that research will soon be controlled by the bots. I will avoid, for the most part, linking to social media posts that I personally find infuriating. These opinions, in my view, are patently false. I do not fully buy into the fact that it will absolutely destroy our future as academics---I cannot and I will not, though this is perhaps unrealistic idealism.</p>
+<p>Nevertheless, I would like to make a tale of two discussions about the use of AI in research by using a formal mathematical thought process. In numerical analysis, we often wish to compare &quot;the ideal result&quot; with &quot;the result we can <em>realistically</em> get&quot; by splitting the argument, i.e., <a href="https://en.wikipedia.org/wiki/Triangle_inequality">triangle inequality</a>: I thus split the discussion into comparing &quot;the ideal result&quot; with &quot;the best result we <em>could possibly</em> get&quot;, then compare this &quot;best result&quot; with &quot;the realistic result.&quot; In the context of generative AI, then, I will call the former comparison <em>the philosopher's stone</em> (we wish to conjure into existence the exact answer to a scientific problem). The latter comparison I suggest as a simple <em>chemist's catalyst</em>. The catalyst, of course, does not perform alchemy, but can speed up reactions and may yet be perfected with further experimentation and research. The reason I suggest this breakdown is that it allows me separate the consequences of using AI into the philosophical/pedagogical versus practical/possibly transient.</p>
+<h2 id="the-chemist-s-catalyst">The Chemist's Catalyst</h2>
+<p>I will start first with the catalytic argument. Any catalyst is clearly tailored to the application/reaction in question. In other words, your mileage may vary, and this advice may or may not hold for you. Our catalyst will, over time, be improved toward its best possible state. LLMs will gradually accumulate diminishing returns, though we have obviously seen enthusiasm for ongoing research into alternative methods for generative AI. As the returns diminish, then, we will be left with some AI that is nearly optimal given its constraints (of architecture, data, compute resources....), possibly making these arguments uninteresting or moot. I will give several borderline-coherent thoughts for this transient case, then.</p>
+<p>First, for the love of God, please check your bibliography by hand. I don't care how good your LLM is, I don't care how &quot;busy&quot; you purport to be. You need to check it by hand. It improves your chances of getting accepted and it takes <em>maybe</em> thirty minutes to make sure everything is consistent. You might yet be able to tailor your references better, hemming them according to the message of the paper. On a converse note, when performing literature review, don't just ask a generic chatbot for advice on a topic. Consider using tools created specifically for this which reference verifiable papers; I have heard nice things about the <a href="https://blog.google/products-and-platforms/products/education/google-scholar-labs/">Google scholar labs</a> tool (though I am convinced that this is their cheapest LLM wrapped around a bag of decision trees). <a href="https://www.dimensions.ai/">Other</a> <a href="https://litllm.onrender.com/">choices</a> <a href="https://anara.com/">abound</a>.</p>
+<p>Second, check your &quot;tedious plotting code&quot; that you propose LLMs should write. I have seen several cases of people showing plots that poorly represent or completely falsify data. Needless to say, I do not think highly of these &quot;researchers.&quot; See later on coding writ-large.</p>
+<p>Third, everything I say in this essay is intended specifically for the act of research and writing. While I think there should be concerns, partly addressed later, about the larger usage of LLMs, I am reasonably convinced that they can make a very productive tool for one-off projects. For example, creating a nicer website, exploring different coding projects only tangentially related to research, etc. The important term here, though, is &quot;<em>one-off</em>&quot;. If you will build on it substantially, or it will change substantially, in the course of your research, please refer to the remainder of these thoughts.</p>
+<p>Fourth, you should read papers for yourself before delegating to AI (more on this later). It is natural, and perhaps productive, to desire a second opinion for a paper that you are reading. Unless AI substantially improves in the coming years, however, it will miss subtle points, oversimplify ideas, or misrepresent the findings. You should try to read the paper critically, take notes (I recommend <a href="https://www.zotero.org/support/pdf_reader">Zotero reader</a>, which has improved substantially in recent years), and understand the mechanisms/findings before delegating to AI similar responsibilities. In some sense, this is the only way you can get &quot;independent&quot; samples of the paper's messaging. If you only deign to read papers that AI thinks is &quot;worth it,&quot; you will suffer from selection bias and be exposed to several dangers: the <a href="https://en.wikipedia.org/wiki/Sycophancy_(artificial_intelligence)">sycophantic nature of LLMs</a>, hidden <a href="https://openreview.net/forum?id=21OQbVHbkM">prompt injection in a PDF</a>, poor <a href="https://www.mdpi.com/2504-2289/7/1/15">topic representation in training data</a>, etc.</p>
+<p>Finally, on a similar note, I'd like to take a moment to consider the mechanics of writing. While there are many papers I wish had less reliance on AI, there are nevertheless papers that have sincerely left me thinking &quot;Man, I wish this were written by ChatGPT.&quot; I understand that much of academia is built around English, which is a second, third, or fourth+ language for many people I work with. With this understanding, there is nothing wrong with using it to <strong>polish</strong>---double emphasis on <em>polish</em>---English, using the LLM to ensure the writing is up-to-snuff. What traps people is when they use the bots to <em>generate</em> the English, causing the paper to <a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing">sound &quot;generated&quot;</a>, whatever that means. I don't suggest trying to use <a href="https://www.nature.com/articles/d41586-021-02134-0">tortured phrases</a>, obviously, but a simple paper with little flourish and grammatical correctness will, in my mind, stand on its own much better than any paper whose word diversity matches that of a fourth-grader and whose every paragraph begins with a bold TL;DR. It's a paper. It's meant to be read. I do not care for superfluous length disguised as &quot;reader-friendly&quot; summaries. To be clear, however, I do not mean that all papers should be short. Instead, I believe that all papers should be <em>clear, concise, and correct</em>. If you find this difficult to achieve, good. And, as a related note, please write emails yourself.</p>
+<p>Alas, I digress. There are certainly ideas I'm missing, but these points of practice evoke the most emotion from me and they must be digested to start thinking about my arguments to come.</p>
+<h2 id="the-philosopher-s-stone">The philosopher's stone</h2>
+<p>Consider now a hypothetical LLM that can generate <em>anything and everything correctly</em>. While this is not yet real, it must be considered in the limit of powerful LLMs. This brings to mind several salient questions: What exactly is the role of academics in our society? What role does <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.pdf">my/your/our research fulfill</a>? What makes a &quot;good&quot; or &quot;bad&quot; paper? What effect does <a href="https://www.jstor.org/stable/26254815">more time have on research</a>? I will not provide any satisfying answer to these questions---much ink has been spilled on these matters---but instead propose practical ideas guided by these questions.</p>
+<p>I will not pretend that academia's purpose being misunderstood by the populace or government is a new phenomenon. For example, the Romans' <a href="https://www.irishtimes.com/news/science/what-did-the-romans-ever-do-for-maths-very-little-1.3940438">largest impact on the course of mathematics</a> is that they prematurely slaughtered the scientist Archimedes; they made little-to-no use of public resources for abstract mathematics (unlike, say, the Greeks or Syracusans). We currently face an onslaught of similar pressure, not just from <a href="https://www.nytimes.com/2026/07/06/us/research-universities-fewer-phds-science.html">contracting funding resources</a>, but from an <a href="https://record.umich.edu/articles/study-higher-ed-responds-to-labor-market-needs/">ever-popular idea that technical institutions serve</a> as convocational degree factories for engineers and white-collar workers.</p>
+<p>Personally, I resonate strongly with Plato's statement on mathematics, &quot;God geometrizes continually.&quot; In other words, it is not our purpose to <em>use</em> geometry for some specific purpose. Instead, the description of geometry is, in and of itself, <a href="https://en.wikipedia.org/wiki/Sacred_geometry">the object</a>. To be clear, I do not object to accelerating research into life-saving pharmaceuticals or mission-critical engineered systems. I would bet, though, that you (the reader) are probably not working on these things, and I generally stray away from claiming any research objective of mine as the deciding line between life and death. Instead, I believe our job is to synthesize and impart <em>knowledge</em> (notably different than a degree that dubiously measures such knowledge), which we can only do once we accumulate <em>understanding</em> and <em>intuition</em>. I am no expert at pedagogy, but it seems reasonable to suggest that knowledge is derived from understanding, and understanding must be created internally. Similar for intuition.</p>
+<p>There is no substitute for understanding and intuition: You may lead a horse to water, but you cannot make it drink, nor can you make it intuit that you wanted it to drink for that matter. The belief that LLMs can help you <a href="https://www.linkedin.com/posts/zack-cordero_i-have-access-to-chatgpt-enterprise-as-a-activity-7372705337654800384-C96g?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABjqAPEBDwKpG6op1yUmo3367FjowT1Gb1Q">understand a thesis's worth of knowledge in a matter of hours or minutes</a> is, in my opinion, demonstrably false and symptomatic of <a href="https://pubsonline.informs.org/do/10.1287/orms.2024.04.15/full/">corporate-like pressures on academia</a>. In this sense, we consider the usage of AI as an accelerator for the popular belief that we should replace the abstract search for understanding in research with a more concrete and convocational attitude. These ideas of knowledge and understanding lead me to a few particular suggestions.</p>
+<p>It used to be the case that one needed to spend considerable time developing an idea before one could submit a paper, which clearly has consequences. For example, this old pattern discourages negative results, leads to greedy areas of research with incremental (i.e., &quot;hole-filling&quot;) topics, and promotes terse papers written hastily. The idea that a paper can be generated near-instantly gives a curious new perspective on these problems. It becomes clear that finances incentivize such hole-filling behavior, as the torrent of such papers has only increased and I similarly still see few negative results. Nevertheless, we now no longer need to have convictions about what ideas are worth our time to pursue. LLMs instead allow us to create papers that are of interest to virtually nobody, including ourselves. Even a handwritten paper based on LLM-generated work that you do not care for will reek of indecision and carelessness; using the model to write the paper only exacerbates such problems. It is our job to <em>care</em> about what we are doing, and believe it or not, such conviction often comes across in great papers. Further, it helps others decide on where to invest their time. If you don't believe in your work, who will? Who should?</p>
+<p>On a more concrete level, I advocate strongly against anyone without a masters thesis (or equivalent thereof) using LLMs for research or research tasks. In particular, this <strong>includes coding</strong>. In applied mathematics, I hold the firm belief that the code/implementation is part of the contribution, even if the research code is not intended to be used outside of the paper. The nuance of many papers lays in the codebase, and there is no shortcut for understanding here as well. For example, it takes nontrivial understanding of finite element methods to know the different implications of doubling the number of elements versus doubling the nodes in each element, even though these change the computational expense identically. Similarly, understanding the practical strengths and pitfalls of, e.g., sequential Monte Carlo, often helps me immensely when evaluating papers in generative modeling. Writing the code is vital when understanding your work <em>in the larger context of research</em>. I will discursively add that finishing a masters does not give one a &quot;free pass&quot; to use an LLM maximally (nor does finishing a Ph.D., postdoc, tenure-review, ...). I include this, though, as a simple condition that I think should be held firm. I do not desire to police each level of academic, but as a guideline, I would meekly suggest that one should have a masters-level understanding of <em>the particular research topic you are using the models for</em>.</p>
+<p>Regarding the other part of communication, I cannot overstate how firmly I stand against using LLMs to generate a presentation. On one hand, I recognize the survival bias: I can only know a presentation is generated if it is bad. On the other hand, I have seen even good presenters give terrible presentations when they were constructed using an LLM. A major problem is that I do not think the LLM's training data represents such presentations very well. I doubt it ever can, though perhaps this goes against the &quot;philosopher's stone&quot; concept. Further, constructing a presentation is usually vital to understanding its content. Instead, consider structuring the presentation yourself first, deciding how things should look on paper, perhaps using powerpoint/keynote/slides to construct a rough draft of the presentation's &quot;rhythm.&quot; Only then, I think, is it okay to use the LLM <em>specifically to create the presentation you first sketched out</em>.</p>
+<h3 id="other-considerations-i-must-make">Other considerations I must make</h3>
+<p>I now mention extrinsic objections to AI usage, most notably being its threat to labor and the environment. It is unclear at this very moment how these issues will evolve, so even I regard my own thoughts as inchoate.</p>
+<p>On the topic of labor: this is something that each individual must reckon with. I do not fault someone for using a model for tasks that reduce the tedium of busywork (forms, annual reports, logistics, etc) or for accelerating and exploring research topics within the aforementioned confines of responsible AI usage. I <em>do</em>, however, fault someone if they use it simply to cooperate and acquiesce to &quot;larger market forces.&quot; Surrendering responsibility under the guise of accelerationism makes a weak academic, in my opinion. Should we not be robust to failure? Do you truly believe that academia (which clearly is not industry) is a &quot;market&quot;?</p>
+<p>It is widely said that job losses will be incurred across the public and private sector, not to mention the counterfactual of openings that are never realized. I may suggest that you use the AI responsibly for the purpose of enabling yourself without reducing your dependence on others. After all, if an LLM means that one professor can do the work of two, do you think budget-constrained departments will still hire both professors? What mental tax would a doubly-burdened professor bear? Further, academics should be amenable to collaboration (in theory, at least), where we can depend on others' areas of expertise and ask them for advice/references/thoughts when we encounter a problem they may know more about. There is, thus, a <em>social</em> consequence where the usage of LLMs can beget research isolation.</p>
+<p>On the topic of environmentalism: I really have no satisfying opinion. Any unbiased information about the models is held deeply confidential, making it difficult to judge the cost of inference or training. Further, the current boom in data centers makes information even more scattered and hard to come by. Nevertheless, I urge you to think about the capitalist viewpoint: It is estimated that Anthropic has 2500 employees. While they are surely paid handsomely, consider that the startup raised $65B dollars in a May 2026 funding round, enough money to pay each employee seven figures annually for the next 25 years. While the engineers paid rather handsomely, I am certain most of this cost is for infrastructure development, and one can do a lot of environmental damage with a budget of that magnitude. How much water will it use? I cannot say. How much energy will the next version of Mythos take to train? It's impossible to know. Nevertheless, the environmental consequences cost hard money to overcome, and the budget must at some point acclimate to the fiscal reality of these costs.</p>
+<p>The water must come from somewhere, the energy must come from a power source, the electronics must be made from raw materials, and they are using (tens of) billions of dollars worth of each of them. These thoughts are clearly incoherent, but that is because I firmly believe the environmental aspect of these models is illegible. Subjectively, I find the virtual non-knowledge of simple environmental facts about these companies appalling and I believe that any self-conscious environmentalist would be best served by avoiding the use of AI for more than the &quot;one-off cases&quot; suggested above. I find it difficult, however, to fault one if they think differently, as we simply do not know the truth of the matter.</p>
+<p>Finally, I finish the &quot;philosopher's stone&quot; topic with a simple question: How much would a real philosopher's stone cost? While I suggest that academia is not a marketplace above, the AI industry absolutely is. Maybe you are at an institution now that can bear this cost---MIT is fortunately well-off---but what if you move on from graduate school to a resource-strapped local college? Will you pay the 200 USD/month subscription out of your own pocket? Will you be able to attain tenure without it? What if the model you depend on for research increases to 500 USD/month? 1000? While the $65B figure cited above is eye-watering, Anthropic is <em>still</em> nowhere near profitable. These costs <em>will</em> rise. Agents <em>will</em> cease to be profitable at the rate of compute increase we are seeing. Even if a particular company becomes profitable, the way you use a model is not guaranteed to exist in a year. <a href="https://www.llm-evolution.com/">Month-to-month</a>, week-to-week, or even <a href="https://www.anthropic.com/news/redeploying-fable-5">day-to-day</a> changes are clear. Thus, please consider that you <em>must</em> develop every skill necessary to get by on your research if all models you use are shut down tomorrow, if not for the sake of science then for the sake of capitalism. There is empirical research suggesting that the skill of critical thinking deteriorates with the <a href="https://www.media.mit.edu/publications/your-brain-on-chatgpt/">dependence on AI</a>; I skeptically await replication and reproduction of these results across independent trials before accepting this as scientific fact. It is, nevertheless, something to be aware of, and you must consider that your research abilities today may not persist into next year without regular exercise.</p>
+<h2 id="parting-thoughts">Parting thoughts</h2>
+<p>If I am to avoid preaching to the choir, it might be necessary to write some nice-and-tidy synopsis here for those whose <a href="https://dev.to/sebs/counter-llm-usage-side-effects-part-1-declining-long-term-attention-span-232e">attention is so frayed</a> that they cannot read an essay. I will avoid this temptation. Throughout this, I have asked many accusatory questions of you, the reader. It is not solely because I am rather conservative in my opinion of the new technologies facing us, though this is part of it. It is also because I find many anti-AI thoughts expressed by the general public as incomplete, making it rare that the <em>average</em> researcher (not the AI enthusiast, not the luddite, but those of you who would find something interesting in this essay) reckons with the extent of the issues I believe this technology poses. I acknowledge my own biases here, but that does not detract from the fact that any technology that bends society to its will must beg questions that we simply cannot ignore. So I ask one last, simple question: Are you really, truly comfortable with the <em>reason</em> that you use AI to the extent that you do? If the answer is no, then perhaps change your usage or perhaps change your reason. If the answer is yes, though, congratulations---you are probably happier than me.</p>
+
+        </div>
+        <hr class="post-end">
+        <footer class="post-info">
+            
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-file-text">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>3532 Words</p>
+            
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-calendar">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>2026-07-07</p>
+            
+        </footer>
+    </article>
+    
+
+    <div class="post-nav thin">
+        
+        
+    </div>
+
+    
+</main>
+
+	  </div>
+
+	  
+
+
+
+<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+  <p>&copy; 2026 <a href="https:&#x2F;&#x2F;dsharp.dev">Daniel Sharp</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+  <p>Made with <a href="https://www.getzola.org" target="_blank" rel="noopener">Zola</a> &#183; Theme <a href="https://github.com/VersBinarii/hermit_zola" target="_blank" rel="noopener">Hermit_Zola</a>
+	
+  </p>
+</footer>
+
+
+
+
+	</div>
+
+	<script src="https://dsharp.dev/js/main.js"></script>
+
+	<!-- Math rendering -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+
+    
+		<link href="https://unpkg.com/highlightjs-badge/highlightjs/styles/vs2015.css" rel="stylesheet">
+		<!-- https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/  for min version -->
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
+		<script>
+			var pres = document.querySelectorAll("pre>code");
+			for (var i = 0; i < pres.length; i++) {
+				hljs.highlightBlock(pres[i]);
+			}
+		</script>
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+			<script>
+				var options = {
+					copyIconClass: "gg-clipboard",
+					checkIconClass: "gg-check"
+				};
+				window.highlightJsBadge(options);
+			</script>
+		
+
+	
+
+	
+	<script src="https://dsharp.dev/js/main.js"></script>
+
+    
+    
+
+	
+  </body>
+</html>
