@@ -2,7 +2,6 @@
 title = "A few special cases of Hermite polynomials: Expectations under general Gaussians"
 date=2026-08-30
 draft=false
-math=true
 +++
 
 Anyone who knows me knows that I love the set of Hermite polynomials; they are, truly, a beautiful set of polynomials for the probabilist. They form a complete basis under a Gaussian weighting (in the $L_2$ sense), they work quite well for approximation, and they have deep ties to physics. For example, in the age of diffusion modeling, it seems like more people should know that these polynomials form the eigenfunctions of the Ornstein--Uhlenbeck process.
